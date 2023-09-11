@@ -21,7 +21,7 @@ document.addEventListener("click", function () {
     const passwordField = document.getElementById("password");
   
     generateButton.addEventListener("click", function () {
-        const passwordLength = prompt("Enter the length of the password (between 8 and 128 characters):");
+        const passwordLength = prompt("Enter the length of the password (between 8 and 15 characters):");
         
         if (passwordLength === null || passwordLength === "") {
             alert("Please enter a valid password length.");
@@ -30,8 +30,8 @@ document.addEventListener("click", function () {
   
         const length = parseInt(passwordLength);
   
-        if (isNaN(length) || length < 8 || length > 128) {
-            alert("Please enter a valid password length between 8 and 128 characters.");
+        if (isNaN(length) || length < 8 || length > 15) {
+            alert("Please enter a valid password length between 8 and 15 characters.");
             return;
         }
   
@@ -50,23 +50,6 @@ document.addEventListener("click", function () {
         const numericChars = "0123456789";
         const specialChars = "!@#$%^&*()_-+=<>?";
   
-        let validChars = "";
-  
-        if (includeLowercase) {
-            validChars += lowercaseChars;
-        }
-  
-        if (includeUppercase) {
-            validChars += uppercaseChars;
-        }
-  
-        if (includeNumbers) {
-            validChars += numericChars;
-        }
-  
-        if (includeSpecialChars) {
-            validChars += specialChars;
-        }
   
         
     });
