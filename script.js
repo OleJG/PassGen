@@ -40,7 +40,7 @@ document.addEventListener("click", function () {
         const includeNumbers = confirm("Include numbers?");
         const includeSpecialChars = confirm("Include special characters?");
   
-        if (!(includeLowercase || includeUppercase || includeNumbers || includeSpecialChars)) {
+        if ((includeLowercase || includeUppercase || includeNumbers || includeSpecialChars)) {
             alert("Please select at least one character type to include.");
             return;
         }
